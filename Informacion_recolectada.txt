@@ -1,0 +1,1 @@
+Comentarios sobre la creacion del Dash con pyplot en el entorno de Pycharm:
