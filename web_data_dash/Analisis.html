@@ -6,31 +6,30 @@
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-</head>
+s</head>
 <body class="container">
 <h1>Acapulco Venta y Renta Febrero 2022</h1>
 <br />
 
 <h3>Resumen Ejecutivo</h3><br />
 <h4>Mercado Inmobiliario Acapulco</h4>
-<h3>Para que conozcas lo último del sector inmobiliario, en Inmuebles24 te compartimos el reporte mensual correspondiente a enero, para el cual, se observa una tendencia a la baja en lo que respecta a los precios de venta, mientras que la renta, mostró un alza respecto al mes pasado.</h3>
+<h3>Para que conozcas lo último del sector inmobiliario, en <a href="https://puntodenegocio.mx/list-properties/"></a>Punto de Negocio te compartimos el reporte trimestral correspondiente a Abril, para el cual, se observa una tendencia a la baja en lo que respecta a los precios de venta, mientras que la renta, mostró un alza respecto al mes pasado.</h3>
 <br />
 <h3>Con el objetivo de mantenerte informado sobre lo que sucede en el sector, te daremos algunos datos que debes conocer para tomar una mejor decisión.</h3><br />
 
-    <h3>VENTA CDMX</h3>
-<h3>De acuerdo con el Reporte de Mercado a enero del 2022, el precio promedio de venta de un inmueble es de $37,775 pesos por metro cuadrado, mostrando una variación a la baja del 1.4%, respecto al mes previo.</h3>
+    <h3>VENTA Acpulco</h3>
+<h3>De acuerdo con el Reporte de Mercado a enero del 2022, el precio promedio de venta de un inmueble es de $3,80000 pesos por metro cuadrado, mostrando una variación a la baja del 3%, respecto al mes previo.</h3>
 <br />
-
-<canvas id="myChart" width="400" height="400"></canvas>
+<canvas id="variacion_baja" width="400" height="400"></canvas>
 <script>
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
+const ctx = document.getElementById('variacion_baja').getContext('2d');
+const variacion_baja = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Variacion de baja:',
+            data: [1.1, 0.2, 1.2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -62,18 +61,19 @@ const myChart = new Chart(ctx, {
 
 
 
-<h3>Es el cuarto mes consecutivo con baja nominal de precio, durante 2021 los precios acumularon una baja del 5.5%</h3>
+<h3>Es el cuarto mes consecutivo con baja nominal de precio, durante 2021 los precios acumularon una baja del 3.8%</h3>
 <br />
-<canvas id="myChart" width="400" height="400"></canvas>
+#Poner_Grafica
+<canvas id="baja_nominal" width="400" height="400"></canvas>
 <script>
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
+const ctx = document.getElementById('baja_nominal').getContext('2d');
+const baja_nominal = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Baja nominal:',
+            data: [1.1, 0.2, 1.2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -102,56 +102,22 @@ const myChart = new Chart(ctx, {
     }
 });
 </script>
-<h3>En cuanto a un departamento de dos recámaras y 65 metros cuadrados, tiene un precio medio de 2.56 millones, cifra que baja respecto a lo reportado en noviembre.</h3>
-<canvas id="Baja_Reportada" width="400" height="400"></canvas>
-<script>
-const ctx = document.getElementById('Baja_Reportada').getContext('2d');
-const Baja_Reportada = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>
+<h3>En cuanto a un departamento de dos recámaras y 95 metros cuadrados, tiene un precio medio de 3.800 millones, cifra que se mantiene desde Enero.</h3>
+
+#Poner_Grafica
+
+
 <br />
-<h3>Al igual que el mes pasado, Miguel Hidalgo, Cuajimalpa y Álvaro Obregón se posicionaron como las alcaldías con mayor precio de venta, al registrar los siguiente:</h3>
+<h3>Al igual que el mes pasado, "Barrio La Poza", "Avenida Costera Miguel Aleman",  se posicionaron como las colonias con mayor precio de venta, al registrar los siguiente:</h3>
 
-
+#Colonias con grafica de barras:
 <ul>
-   <li>$55,646 pesos</li>
-   <li>$50,647 pesos</li>
-   <li>$41,356 pesos</li>
+   <li>$24,00000 pesos</li>
+   <li>$58,81852 pesos</li>
 </ul>
+#Poner_Grafica:
 
-<h3>Tanto Cuajimalpa y Álvaro Obregón mostraron una baja en su variación mensual del 1.2% y 0.9%, respectivamente.</h3>
+<h3>Tanto la colonia "Costera Miguel Aleman" mostraron una baja en su variación mensual del 1.2%, respectivamente.</h3>
 </body>
 </html>
 
