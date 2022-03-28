@@ -6,118 +6,237 @@
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-s</head>
+</head>
 <body class="container">
 <h1>Acapulco Venta y Renta Febrero 2022</h1>
 <br />
 
 <h3>Resumen Ejecutivo</h3><br />
 <h4>Mercado Inmobiliario Acapulco</h4>
-<h3>Para que conozcas lo último del sector inmobiliario, en <a href="https://puntodenegocio.mx/list-properties/"></a>Punto de Negocio te compartimos el reporte trimestral correspondiente a Abril, para el cual, se observa una tendencia a la baja en lo que respecta a los precios de venta, mientras que la renta, mostró un alza respecto al mes pasado.</h3>
+<h3>Para que conozcas lo último del sector inmobiliario, en Punto de Negocio te compartimos el reporte trimestral correspondiente a Marzo, para el cual, se observa una tendencia a la baja en lo que respecta a los precios de venta, mientras que la renta, mostró un alza respecto al trimestre pasado.</h3>
 <br />
 <h3>Con el objetivo de mantenerte informado sobre lo que sucede en el sector, te daremos algunos datos que debes conocer para tomar una mejor decisión.</h3><br />
 
-    <h3>VENTA Acpulco</h3>
-<h3>De acuerdo con el Reporte de Mercado a enero del 2022, el precio promedio de venta de un inmueble es de $3,80000 pesos por metro cuadrado, mostrando una variación a la baja del 3%, respecto al mes previo.</h3>
+    <h3>VENTA Acapulco</h3>
+<h3>De acuerdo con el Reporte de Mercado a Marzo del 2022, el precio promedio de venta de una oficina es de $2,240,000 pesos por metro cuadrado, mostrando una variación a la baja del 1.4%, respecto al mes previo.</h3>
 <br />
-<canvas id="variacion_baja" width="400" height="400"></canvas>
+
+<canvas id="grafica1" name="grafica1" width="50" height="50"></canvas>
+
 <script>
-const ctx = document.getElementById('variacion_baja').getContext('2d');
-const variacion_baja = new Chart(ctx, {
-    type: 'line',
+const $grafica1 = document.querySelector("#grafica1");
+const etiquetas = ["Enero", "Febrero", "Marzo"]
+
+const datosVentas2018 = {
+    label: "Enero del 2022",
+    data: [500, 900, 134], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(211,93,110, 0.2)',// Color de fondo
+    borderColor: 'rgba(211,93,110, 1)',// Color del borde
+    borderWidth: 1,// Ancho del borde
+};
+const datosVentas2019 = {
+    label: "Febrero del 2022",
+    data: [700, 700, 4500], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(209,234,163,0.5)',// Color de fondo
+    borderColor: 'rgba(209,234,163,1)',// Color del borde
+    borderWidth: 1,// Ancho del borde
+};
+const datosVentas2020 = {
+    label: "Marzo del 2022",
+    data: [5000, 1500, 8000], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo
+    borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
+    borderWidth: 1,// Ancho del borde
+};
+
+new Chart($grafica1, {
+    type: 'line',// Tipo de gráfica
     data: {
-        labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
-        datasets: [{
-            label: 'Variacion de baja:',
-            data: [1.1, 0.2, 1.2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
+        labels: etiquetas,
+        datasets: [
+            datosVentas2018,
+            datosVentas2019,
+            datosVentas2020,
+            // Aquí más datos...
+        ]
     },
     options: {
         scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }],
+        },
     }
 });
 </script>
 
 
 
-<h3>Es el cuarto mes consecutivo con baja nominal de precio, durante 2021 los precios acumularon una baja del 3.8%</h3>
+
+<h3>Es el cuarto mes consecutivo con baja nominal de precio, durante 2021 los precios acumularon una baja del 5.5%</h3>
 <br />
-#Poner_Grafica
-<canvas id="baja_nominal" width="400" height="400"></canvas>
-<script>
-const ctx = document.getElementById('baja_nominal').getContext('2d');
-const baja_nominal = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
-        datasets: [{
-            label: 'Baja nominal:',
-            data: [1.1, 0.2, 1.2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>
-<h3>En cuanto a un departamento de dos recámaras y 95 metros cuadrados, tiene un precio medio de 3.800 millones, cifra que se mantiene desde Enero.</h3>
 
-#Poner_Grafica
+<h3>En cuanto a un departamento de dos recámaras y 65 metros cuadrados, tiene un precio medio de 2.56 millones, cifra que baja respecto a lo reportado en noviembre.</h3>
+
+<br/>
+<h3>Al igual que el mes pasado, Miguel Hidalgo, Cuajimalpa y Álvaro Obregón se posicionaron como las alcaldías con mayor precio de venta, al registrar los siguiente:</h3>
 
 
-<br />
-<h3>Al igual que el mes pasado, "Barrio La Poza", "Avenida Costera Miguel Aleman",  se posicionaron como las colonias con mayor precio de venta, al registrar los siguiente:</h3>
-
-#Colonias con grafica de barras:
 <ul>
-   <li>$24,00000 pesos</li>
-   <li>$58,81852 pesos</li>
+   <li>$55,646 pesos</li>
+   <li>$50,647 pesos</li>
+   <li>$41,356 pesos</li>
 </ul>
-#Poner_Grafica:
 
-<h3>Tanto la colonia "Costera Miguel Aleman" mostraron una baja en su variación mensual del 1.2%, respectivamente.</h3>
+<canvas id="#Colonias" name="Colonias" width="50" height="50"></canvas>
+<script>
+var $Colonias = document.getElementById("#Colonias");
+
+const Colonias = ["Enero", "Febrero", "Marzo"]
+const Mes_Enero = {
+    label: "Enero del 2022",
+    data: [500, 900, 134], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(211,93,110, 0.2)',// Color de fondo
+    borderColor: 'rgba(211,93,110, 1)',// Color del borde
+    borderWidth: 1,// Ancho del borde
+};
+const Mes_Febrero = {
+    label: "Febrero del 2022",
+    data: [700, 700, 4500], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(209,234,163,0.5)',// Color de fondo
+    borderColor: 'rgba(209,234,163,1)',// Color del borde
+    borderWidth: 1,// Ancho del borde
+};
+const Mes_Marzo = {
+    label: "Marzo del 2022",
+    data: [5000, 1500, 8000], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo
+    borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
+    borderWidth: 1,// Ancho del borde
+};
+
+new Chart($Colonias, {
+    type: 'bar',// Tipo de gráfica
+    data: {
+        labels: Colonias,
+        datasets: [
+            Mes_Enero,
+            Mes_Febrero,
+            Mes_Marzo,
+            // Aquí más datos...
+        ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }],
+        },
+    }
+});
+</script>
+
+
+<h3>Tanto Cuajimalpa y Álvaro Obregón mostraron una baja en su variación mensual del 1.2% y 0.9%, respectivamente.</h3>
+
+<canvas id="marksChart" name="marksChart" width="50" height="50"></canvas>
+<script>
+var marksCanvas = document.getElementById("marksChart");
+
+Chart.defaults.font.family = "Lato";
+Chart.defaults.font.size = 22;
+Chart.defaults.color = "black";
+
+var marksData = {
+  labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
+  datasets: [{
+    label: "Martha",
+    backgroundColor: "transparent",
+    borderColor: "red",
+    fill: false,
+    radius: 6,
+    pointRadius: 6,
+    pointBorderWidth: 3,
+    pointBackgroundColor: "pink",
+    pointBorderColor: "black",
+    pointHoverRadius: 10,
+    data: [65, 75, 70, 80, 60, 80]
+  }, {
+    label: "Steven",
+    backgroundColor: "transparent",
+    borderColor: "blue",
+    fill: false,
+    radius: 6,
+    pointRadius: 6,
+    pointBorderWidth: 3,
+    pointBackgroundColor: "lightblue",
+    pointBorderColor: "black",
+    pointHoverRadius: 10,
+    data: [54, 65, 60, 70, 70, 75]
+  },
+  {
+    label: "Harry",
+    backgroundColor: "transparent",
+    borderColor: "green",
+    fill: false,
+    radius: 6,
+    pointRadius: 6,
+    pointBorderWidth: 3,
+    pointBackgroundColor: "lightgreen",
+    pointBorderColor: "black",
+    pointHoverRadius: 10,
+    data: [84, 56, 75, 40, 90, 85]
+  }]
+};
+
+var chartOptions = {
+  plugins: {
+    title: {
+      display: true,
+      text: "Comparing Student Performance",
+      position: "bottom"
+    },
+    legend: {
+      position: "bottom",
+      labels: {
+        padding:  30
+      }
+    }
+  },
+  scales: {
+    r: {
+      max: 100,
+      min: 30,
+      ticks: {
+        stepSize: 15,
+        backdropColor: "orange",
+        color: "white"
+      },
+      grid: {
+        color: "black"
+      },
+      angleLines: {
+          color: "gray"
+      },
+      pointLabels: {
+        font: {
+          size: 20
+        }
+      }
+    }
+  }
+};
+
+var radarChart = new Chart(marksCanvas, {
+  type: 'radar',
+  data: marksData,
+  options: chartOptions
+});
+</script>
 </body>
 </html>
 
